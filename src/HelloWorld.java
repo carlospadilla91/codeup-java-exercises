@@ -82,11 +82,11 @@ public class HelloWorld {
 
         //byte num = 128; //error when trying to assign a value higher than what byte holds
 
-        byte num = 127;
-        System.out.println(++num); //since byte capacity is high end 127 and we incremented inside the print then our console prints the lowest capacity for byte
-
-        byte num2 = -128;
-        System.out.println(--num2); //since byte low end capacity is -128 and decremented the number then the console will print out the high end capacity for byte
+//        byte num = 127;
+//        System.out.println(++num); //since byte capacity is high end 127 and we incremented inside the print then our console prints the lowest capacity for byte
+//
+//        byte num2 = -128;
+//        System.out.println(--num2); //since byte low end capacity is -128 and decremented the number then the console will print out the high end capacity for byte
 
 
 
