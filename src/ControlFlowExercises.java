@@ -105,7 +105,20 @@ public class ControlFlowExercises {
 //
 //        for(int i = 1; i <= userInput; i+= 1) {
 //            System.out.println(i + "      | " + (i * i) + "        | " + (i * i * i));
+//            if(i == userInput) {
+//                System.out.print("Would you like to continue? ");
+//                String userResponse = sc.next();
+//                if(userResponse.equalsIgnoreCase("yes")) {
+//                    System.out.print("How much further would you like to go? ");
+//                    int furtherNum = sc.nextInt();
+//                    userInput += furtherNum;
+//                }
+//            }
 //        }
+
+
+
+
         // table pretty much complete just some formatting issues
 
         //TODO: Convert given number grades into letter grades.
@@ -123,30 +136,31 @@ public class ControlFlowExercises {
         //D : 66 - 60
         //F : 59 - 0
 
-        System.out.print("Would you like to enter your grade? ");
-        String userInput = sc.next();
-
-        if(userInput.equalsIgnoreCase("yes")) {
-            System.out.println("Great!");
-        } else {
-            System.exit(0);
-        }
-
-        System.out.print("Enter your number grade 0-100: ");
-        int numGrade = sc.nextInt();
-
-        if(numGrade >= 88) {
-            System.out.println("Your letter grade is: A");
-        } else if(numGrade >=80) {
-            System.out.println("Your letter grade is: B");
-        } else if(numGrade >= 67) {
-            System.out.println("Your letter grade is: C");
-        } else if(numGrade >= 60) {
-            System.out.println("Your letter grade is: D");
-            System.out.println("Push more code!");
-        } else if(numGrade >= 59) {
-            System.out.println("Your letter grade is: F");
-        }
+//        System.out.print("Would you like to enter your grade? ");
+//        String userInput = sc.next();
+//
+//        if(userInput.equalsIgnoreCase("yes")) {
+//            System.out.println("Great!");
+//        } else {
+//            System.exit(0);
+//        }
+//
+//        System.out.print("Enter your number grade 0-100: ");
+//        int numGrade = sc.nextInt();
+//
+//        if(numGrade >= 88) {
+//            System.out.println("Your letter grade is: A");
+//        } else if(numGrade >=80) {
+//            System.out.println("Your letter grade is: B");
+//        } else if(numGrade >= 67) {
+//            System.out.println("Your letter grade is: C");
+//        } else if(numGrade >= 60) {
+//            System.out.println("Your letter grade is: D");
+//            System.out.println("Push more code!");
+//        } else if(numGrade >= 59) {
+//            System.out.println("Your letter grade is: F");
+//            System.out.println("I recommend seeing a tutor.");
+//        }
 
 
 
