@@ -16,6 +16,8 @@ public class MethodsExercises {
 //        System.out.println(isVowel("b"));
 //        System.out.println(hasVowels("Carlos"));
 //        System.out.println(countVowels("Carlos"));
+//        System.out.println(isPrime(7));
+//        System.out.println(isPrime(4));
 
     }
 
@@ -54,29 +56,20 @@ public class MethodsExercises {
         Scanner sc = new Scanner(System.in);
         System.out.println("Do you want to continue?");
         String userInput = sc.next();
-        if (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")) {
-            return true;
-        }
-        return false;
+        return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y");
     }
 
     //Write a method named isEven() that takes in an integer and returns a boolean if the input is even or not.
 
     public static boolean isEven(int num) {
-        if (num % 2 == 0) {
-            return true;
-        }
-        return false;
+        return num % 2 == 0;
     }
 
 
     //Write a method named isOdd() that takes in an integer and returns a boolean if the input is odd or not.
 
     public static boolean isOdd(int num) {
-        if (num % 2 != 0) {
-            return true;
-        }
-        return false;
+        return num % 2 != 0;
     }
 
 
@@ -139,10 +132,32 @@ public class MethodsExercises {
     //Write a solution to FizzBuzz using recursion instead of a loop.
 
 
+
+
     //Write a method named isPrime() that that accepts in an integer number and returns a boolean if the number is evenly divisible only by either 1 or the number itself.
+
+    public static boolean isPrime(int num){
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i < num; i += 1) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 
     //Write a method named getTwentyPrimes() that returns a string containing the first 20 prime numbers, each separated by a comma. Output: "1, 2, 3, 5, 7, 11, 13, 17, 19"... until we have a total count of 20 primes in the string.
 
+//    public static String getTwentyPrimes(){
+//        for (int i = 1; i <= 20; i += 1) {
+//            if (i == 1 || i == 0) {
+//                continue;
+//            }
+//        }
+//    }
 
 }
