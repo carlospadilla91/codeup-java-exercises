@@ -18,6 +18,18 @@ public class MethodsExercises {
 //        System.out.println(countVowels("Carlos"));
 //        System.out.println(isPrime(7));
 //        System.out.println(isPrime(4));
+//        System.out.println(add(2, 3));
+//        System.out.println(subtract(5, 3));
+//        System.out.println(multiply(2, 3));
+//        System.out.println(division(10, 5));
+//        System.out.println(modulus(10, 5));
+//        System.out.println(multiplyWithLoop(3, 10));
+//        System.out.println(multiplyRecursion(5, 10));
+//        System.out.println(getInteger(1, 10));
+//        System.out.println(multiplyNumbers(4));
+        printTable();
+
+
 
     }
 
@@ -159,5 +171,104 @@ public class MethodsExercises {
 //            }
 //        }
 //    }
+
+    //TODO: Basic Arithmetic
+    //
+    //Create four separate methods. Each will perform an arithmetic operation:
+    //
+    //Addition
+    //Subtraction
+    //Multiplication
+    //Division
+    //Each function needs to take two parameters/arguments so that the operation can be performed.
+    //
+    //Test your methods and verify the output.
+    //
+    //Add a modulus method that finds the modulus of two numbers.
+    //
+    //Food for thought: What happens if we try to divide by zero? What should happen? ERROR WHEN TRYING TO DIVIDE BY 0
+
+    public static int add(int x, int y){
+        return x + y;
+    }
+
+    public static int subtract(int x, int y){
+        return x - y;
+    }
+
+    public static int multiply(int x, int y){
+        return x * y;
+    }
+
+    public static int division(int x, int y){
+        return x / y;
+    }
+
+    public static int modulus(int x, int y){
+        return x % y;
+    }
+
+    public static int multiplyWithLoop(int x, int y){
+        int result = 0;
+        while (x > 0){
+            result += y;
+            x--;
+        }
+        return result;
+    }
+
+    public static int multiplyRecursion(int x, int y) {
+        int result = 0;
+        if (y != 0) {
+            result += x + multiplyRecursion(x, y -1);
+        }
+        return result;
+    }
+
+    //TODO: Create a method that validates that user input is in a certain range
+    //
+    //The method signature should look like this:
+
+    public static String getInteger(int min, int max){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number between 1-10: ");
+        int userInput = sc.nextInt();
+        if (userInput >= min && userInput <= max) {
+            return "Your number is: " + userInput;
+        } else {
+            System.out.println("Your number is not in range");
+            return getInteger(min, max);
+        }
+    }
+
+    public static long multiplyNumbers(int num){
+        if (num >= 1) {
+            return num * multiplyNumbers(num - 1);
+        } else {
+            return 1;
+        }
+    }
+
+
+    public static void printTable(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a number between 1-10");
+        int userInt = sc.nextInt();
+        if (userInt >= 1 && userInt <= 10) {
+            for (int i = 1; i <= userInt; i += 1) {
+                System.out.println(i + "!" + " = " + i + " = " + multiplyNumbers(i));
+            }
+                System.out.println("Would you like to continue?");
+                String userInput = sc.next();
+                if (userInput.equalsIgnoreCase("yes")) {
+                    System.out.println("Enter a number of how much further you would like to continue: ");
+                    int userNum = sc.nextInt();
+                    userInt += userNum;
+
+            }
+        }
+    }
+
+    public static void diceRoll(){}
 
 }
