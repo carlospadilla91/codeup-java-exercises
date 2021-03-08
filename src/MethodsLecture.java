@@ -68,6 +68,23 @@ public class MethodsLecture {
 
 // ============== Recursion ===============
 
+//    public static String printName(String name, int numTimesToRun){
+//
+//        if (numTimesToRun > 0) {
+//            System.out.println(name);
+//            return printName(name, numTimesToRun - 1);
+//        }
+//
+//    }
+
+    public static int sum(int k){
+        if (k > 0) {
+            return k + sum(k - 1);
+        } else {
+            return 0;
+        }
+    }
+
 
 // ============== Responsible Method Use ===============
 
