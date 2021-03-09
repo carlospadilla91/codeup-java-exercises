@@ -27,7 +27,8 @@ public class MethodsExercises {
 //        System.out.println(multiplyRecursion(5, 10));
 //        System.out.println(getInteger(1, 10));
 //        System.out.println(multiplyNumbers(4));
-        printTable();
+//        printTable();
+        diceRoll();
 
 
 
@@ -264,11 +265,32 @@ public class MethodsExercises {
                     System.out.println("Enter a number of how much further you would like to continue: ");
                     int userNum = sc.nextInt();
                     userInt += userNum;
-
             }
         }
     }
 
-    public static void diceRoll(){}
+    public static void diceRoll(){
+        Scanner sc =  new Scanner(System.in);
+        System.out.println("Please enter how many sides the first die has: ");
+        int firstDie = sc.nextInt();
+        System.out.println("Please enter how many sides the second die has: ");
+        int secondDie = sc.nextInt();
+        int minRoll = 1;
+        int firstRange = firstDie - minRoll + minRoll;
+        int secondRange = secondDie - minRoll + minRoll;
+        System.out.println("Enter 'Roll' to roll the dice");
+        String userInput = sc.next();
+        if (userInput.equalsIgnoreCase("roll")) {
+            int firstRoll = (int)(Math.random() * firstRange) + minRoll;
+            int secondRoll = (int)(Math.random() * secondRange) + minRoll;
+            System.out.println("Your first roll is: " + firstRoll);
+            System.out.println("Your second roll is: " + secondRoll);
+            System.out.println("Do you want to roll again? ");
+            String userAnswer = sc.next();
+            if (userAnswer.equalsIgnoreCase("yes")) {
+                diceRoll();
+            }
+        }
+    }
 
 }
