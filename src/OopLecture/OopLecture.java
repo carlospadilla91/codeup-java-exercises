@@ -35,15 +35,22 @@ public class OopLecture {
 
 
 
-        Person bestDrummerAlive = new Person();
-        bestDrummerAlive.name = "Neil Peart";
+//        Person bestDrummerAlive = new Person();
+//        bestDrummerAlive.name = "Neil Peart";
+//
+//        Person bestSinger = new Person();
+//        bestSinger.name = "Weird Al";
+//
+//        Person.worldPopulation += 1;
+//        System.out.println(bestDrummerAlive.name);
+//        System.out.println(Person.worldPopulation);
 
-        Person bestSinger = new Person();
-        bestSinger.name = "Weird Al";
+        Student s1 = new Student("Carlos", 90.00);
 
-        Person.worldPopulation += 1;
-        System.out.println(bestDrummerAlive.name);
-        System.out.println(Person.worldPopulation);
+        //s1.grade; DON'T DO THIS BC 'grade' is private in Student Class
+        System.out.println(s1.shareGrade());
+        s1.changeGrade(99.00);
+        System.out.println(s1.shareGrade());
 
 
         /* ================================= OOP INTRO
