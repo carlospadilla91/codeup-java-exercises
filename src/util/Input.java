@@ -13,23 +13,63 @@ public class Input {
     }
 
     public String getString(){
-        return this.scanner.next();
+        return this.scanner.nextLine();
+    }
+
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return getString();
     }
 
     public boolean yesNo(){
-        System.out.println("Please enter yes/no: ");
         String userInput = this.scanner.next();
         return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y");
     }
-//
-//    public int getInt(int min, int max){
-//        System.out.println("Please enter number between " + min + " and " + max);
-//        int userNum = this.scanner.nextInt();
-//        if (userNum >= min && userNum <= max){
-//            return userNum;
-//        }
-//    }
 
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        return yesNo();
+
+    }
+
+    public int getInt() {
+        if (scanner.hasNextInt()){
+            return scanner.nextInt();
+        } else {
+            System.out.println("Invalid integer; please enter an integer.");
+            scanner.nextLine();
+            return getInt();
+        }
+    }
+
+    public int getInt(int min, int max){
+        int userInt = getInt();
+        if (userInt >= min && userInt <= max) {
+            return userInt;
+        } else {
+            System.out.println("Your number is not in range; please enter a number between " + min + " and " + max);
+            return getInt(min, max);
+        }
+    }
+
+    public double getDouble(){
+        if (scanner.hasNextDouble()){
+            return scanner.nextDouble();
+        } else {
+            System.out.println("Invalid double number; please enter a valid double number.");
+            return getDouble();
+        }
+    }
+
+    public double getDouble(double min, double max){
+        double userDbl = getDouble();
+        if (userDbl >= min && userDbl <= max) {
+            return userDbl;
+        } else {
+            System.out.println("Your number is not in range; please enter a number between " + min + " and " + max);
+            return getDouble(min, max);
+        }
+    }
 
 }
 

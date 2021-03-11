@@ -3,7 +3,7 @@ public class Person {
     private String name;
 
     public String getName(){
-        return name;
+        return this.name;
 //TODO: return the person's name
     }
 
