@@ -13,23 +13,30 @@ public class ArraysExercises {
         people[0] = new Person("Carlos");
         people[1] = new Person("Sarah");
         people[2] =  new Person("Padilla");
-        System.out.println(Arrays.toString(people));
+//        System.out.println(Arrays.toString(people));
 
-        for (Person person : people){
-            System.out.println(person.getName());
-        }
+        // for loop that prints each name from people array
+//        for (Person person : people){
+//            System.out.println(person.getName());
+//        }
 
-        //TODO: Create a static method named addPerson. It should accept an array of Person objects, as well as a single person object to add to the passed array. It should return an array whose length is 1 greater than the passed array, with the passed person object at the end of the array.
 
 
         System.out.println(Arrays.toString(addPerson(people, new Person("Noriega"))));
 
 
 
+        for (Person person : addPerson(people, new Person("Noriega"))) {
+            System.out.println(person.getName());
+        }
+
+
     }
+    //TODO: Create a static method named addPerson. It should accept an array of Person objects, as well as a single person object to add to the passed array. It should return an array whose length is 1 greater than the passed array, with the passed person object at the end of the array.
+
     public static Person[] addPerson(Person[] people, Person person){
         Person[] newArr = Arrays.copyOf(people, people.length + 1);
-        Arrays.fill(newArr, person);
+        newArr[people.length] = person; // this is just like typing newArr[3] = person; person is the new element being passed in added to newArr
         return newArr;
     }
 
