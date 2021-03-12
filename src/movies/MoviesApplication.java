@@ -41,14 +41,14 @@ public class MoviesApplication {
             case 1:
                 System.out.println("Here is a list of all the movies!\n");
                 for (Movie movie : movieList) {
-                    System.out.printf("%s, %s\n",movie.getName(),movie.getCategory());
+                    System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
                 }
                 break;
             case 2:
                 System.out.println("Here is a list of all animated movies!\n");
                 for (Movie movie : movieList) {
                     if (movie.getCategory().equalsIgnoreCase("animated")){
-                        System.out.printf("%s, %s\n",movie.getName(),movie.getCategory());
+                        System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
                     }
                 }
                 break;
@@ -56,7 +56,7 @@ public class MoviesApplication {
                 System.out.println("Here is a list of all drama movies!\n");
                 for (Movie movie : movieList){
                     if (movie.getCategory().equalsIgnoreCase("drama")){
-                        System.out.printf("%s, %s\n",movie.getName(),movie.getCategory());
+                        System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
                     }
                 }
                 break;
@@ -64,7 +64,7 @@ public class MoviesApplication {
                 System.out.println("Here is a list of all horror movies!\n");
                 for (Movie movie : movieList){
                     if (movie.getCategory().equalsIgnoreCase("horror")){
-                        System.out.printf("%s, %s\n",movie.getName(),movie.getCategory());
+                        System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
                     }
                 }
                 break;
@@ -72,7 +72,7 @@ public class MoviesApplication {
                 System.out.println("Here is a list of all scifi movies!\n");
                 for (Movie movie : movieList){
                     if (movie.getCategory().equalsIgnoreCase("scifi")){
-                        System.out.printf("%s, %s\n",movie.getName(),movie.getCategory());
+                        System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
                     }
                 }
         }
