@@ -21,12 +21,12 @@ public class ArraysExercises {
 //        }
 
 
+        // changes the og array of people and adds element of Noriega to end of it with addPerson method
+        people = addPerson(people, new Person("Noriega"));
 
-        System.out.println(Arrays.toString(addPerson(people, new Person("Noriega"))));
 
 
-
-        for (Person person : addPerson(people, new Person("Noriega"))) {
+        for (Person person : people) {
             System.out.println(person.getName());
         }
 
