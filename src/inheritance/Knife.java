@@ -12,4 +12,8 @@ public class Knife extends KitchenTools{
         public void spread(){
             System.out.println("Nice spreading!");
         }
+
+        public void putAway(){
+            System.out.println("You've put your knife away.");
+        }
 }

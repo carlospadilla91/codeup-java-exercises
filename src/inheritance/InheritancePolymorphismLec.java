@@ -132,6 +132,10 @@ public class InheritancePolymorphismLec {
 
         Knife knife = new Knife();
         Plate plate = new Plate();
+        Bread bread = new Bread();
+        Jelly jelly = new Jelly();
+        PeanutButter pb = new PeanutButter();
+
         knife.isClean = false;
         knife.washable = true;
 //        knife.getKitchenTool();
@@ -146,5 +150,9 @@ public class InheritancePolymorphismLec {
         plate.shape = "Round";
         System.out.println(plate.shape);
         plate.placeFoodOnIt();
+        jelly.throwAway();
+        pb.throwAway();
+
+
     }
 }

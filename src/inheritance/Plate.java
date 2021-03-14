@@ -9,4 +9,8 @@ public class Plate extends KitchenTools{
     public void placeFoodOnIt(){
         System.out.println("You placed food on your plate!");
     }
+
+    public void putAway(){
+        System.out.println("You've put your knife away.");
+    }
 }
