@@ -6,6 +6,11 @@ public class Knife extends KitchenTools{
 
         public String typeOfKnife;
 
+        public Knife(String name, boolean isSharp){
+            super(name);
+            this.isSharp = isSharp;
+        }
+
         public void cut(){
             System.out.println("You cut something!");
         }
@@ -15,5 +20,9 @@ public class Knife extends KitchenTools{
 
         public void putAway(){
             System.out.println("You've put your knife away.");
+        }
+
+        public void washDish(){
+            System.out.println("You washed your knife!");
         }
 }

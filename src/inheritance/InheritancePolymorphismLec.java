@@ -1,5 +1,7 @@
 package inheritance;
 
+import jelly.Jelly;
+
 public class InheritancePolymorphismLec {
 
     /*TODO:What is Polymorphism?
@@ -130,8 +132,9 @@ public class InheritancePolymorphismLec {
 
     public static void main(String[] args) {
 
-        Knife knife = new Knife();
-        Plate plate = new Plate();
+        Ingredient ingredient = new Ingredient();
+        Knife knife = new Knife("Knife", true);
+        Plate plate = new Plate("Plate", "Round");
         Bread bread = new Bread();
         Jelly jelly = new Jelly();
         PeanutButter pb = new PeanutButter();
@@ -152,6 +155,8 @@ public class InheritancePolymorphismLec {
         plate.placeFoodOnIt();
         jelly.throwAway();
         pb.throwAway();
+        jelly.calories = 80;
+        jelly.printCalories();
 
 
     }
