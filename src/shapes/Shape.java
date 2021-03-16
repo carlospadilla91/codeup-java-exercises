@@ -1,4 +1,8 @@
 package shapes;
 
-public abstract class Shape {
+public interface Shape {
+
+    void getArea();
+    void getPerimeter();
+
 }
