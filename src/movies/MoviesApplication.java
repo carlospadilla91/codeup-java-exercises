@@ -14,6 +14,21 @@ public class MoviesApplication {
 
     //TODO: Your application should continue to run until the user chooses to exit.
 
+    // this method prints all the movies and all categories
+    public static void getMovieList(Movie[] movieList){
+        for (Movie movie : movieList){
+            System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
+        }
+    }
+    // this method prints movies based on passed in array of movies and specific category
+    public static void getMovieList(Movie[] movieList, String category){
+        for (Movie movie : movieList){
+            if (movie.getCategory().equalsIgnoreCase(category)){
+                System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -40,49 +55,24 @@ public class MoviesApplication {
                 break;
             case 1:
                 System.out.println("Here is a list of all the movies!\n");
-                for (Movie movie : movieList) {
-                    System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
-                }
+                getMovieList(movieList);
                 break;
             case 2:
                 System.out.println("Here is a list of all animated movies!\n");
-                for (Movie movie : movieList) {
-                    if (movie.getCategory().equalsIgnoreCase("animated")){
-                        System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
-                    }
-                }
+                getMovieList(movieList, "animated");
                 break;
             case 3:
                 System.out.println("Here is a list of all drama movies!\n");
-                for (Movie movie : movieList){
-                    if (movie.getCategory().equalsIgnoreCase("drama")){
-                        System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
-                    }
-                }
+                getMovieList(movieList, "drama");
                 break;
             case 4:
                 System.out.println("Here is a list of all horror movies!\n");
-                for (Movie movie : movieList){
-                    if (movie.getCategory().equalsIgnoreCase("horror")){
-                        System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
-                    }
-                }
+                getMovieList(movieList, "horror");
                 break;
             case 5:
                 System.out.println("Here is a list of all scifi movies!\n");
-                for (Movie movie : movieList){
-                    if (movie.getCategory().equalsIgnoreCase("scifi")){
-                        System.out.printf("%s -- %s\n",movie.getName(),movie.getCategory());
-                    }
-                }
+                getMovieList(movieList, "scifi");
+
         }
-
-//        if (userInt == 0){
-//            System.out.println("Goodbye!");
-//        } else if (userInt == 1) {
-//            return MoviesArray.findAll();
-//        }
-
-
     }
 }
