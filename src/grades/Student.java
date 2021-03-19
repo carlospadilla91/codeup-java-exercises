@@ -15,10 +15,15 @@ public class Student {
         this.grades = new ArrayList<>();
     }
 
+    // NON STATIC METHODS FOR STUDENT INSTANCES
+
     // returns the student's name
     public String getName(){
         return this.name;
-    };
+    }
+    public List<Integer> getGrades(){
+        return this.grades;
+    }
     // adds the given grade to the grades property
     public void addGrade(int grade){
         this.grades.add(grade);
@@ -32,6 +37,7 @@ public class Student {
         }
         return sum / this.grades.size();
     }
+
 
     public static void main(String[] args) {
 
