@@ -72,11 +72,18 @@ public class Input {
     }
 
     public double getDouble() throws NumberFormatException{
-        Double userDbl = Double.valueOf(getString());
-        if (!userDbl.getClass().getSimpleName().equals("Double")){
-            throw new NumberFormatException("Invalid input");
+        try{
+            return Double.parseDouble(getString());
+        } catch (NumberFormatException e){
+            System.out.println("Input is not a number of type double.");
+            System.out.println("Please try again.");
+            return getDouble();
         }
-        return userDbl;
+//        Double userDbl = Double.valueOf(getString());
+//        if (!userDbl.getClass().getSimpleName().equals("Double")){
+//            throw new NumberFormatException("Invalid input");
+//        }
+//        return userDbl;
 //        if (scanner.hasNextDouble()){
 //            return scanner.nextDouble();
 //        } else {

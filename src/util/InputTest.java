@@ -28,6 +28,6 @@ public class InputTest {
 //        } catch (NumberFormatException e){
 //            e.getMessage();
 //        }
-        System.out.println(userInput.getInt());
+        System.out.println(userInput.getDouble());
     }
 }
