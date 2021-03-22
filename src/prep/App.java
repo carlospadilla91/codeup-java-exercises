@@ -21,5 +21,9 @@ public class App {
         }catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
+
+        Food taco = new Taco("Chorizo and egg taco", "Mixed chorizo with egg", 150);
+
+        taco.consume(taco.getName());
     }
 }

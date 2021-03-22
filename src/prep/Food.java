@@ -1,6 +1,8 @@
 package prep;
 
-public class Food {
+import java.util.Collection;
+
+public class Food implements Consumable {
 
     //TODO:
     //has private properties for String name, String description, and int calories
@@ -62,5 +64,15 @@ public class Food {
 
     public void setCalories(int calories) {
         this.calories = calories;
+    }
+
+    @Override
+    public void consume(String name) {
+
+    }
+
+    @Override
+    public Collection<String> getFullDescription() {
+        return null;
     }
 }

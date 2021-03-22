@@ -1,6 +1,8 @@
 package prep;
 
-public class Taco extends Food{
+import java.util.Collection;
+
+public class Taco extends Food implements Consumable{
 
     private String typeOfTaco;
     private boolean hasSalsa;
@@ -15,5 +17,22 @@ public class Taco extends Food{
 
     public void setTypeOfTaco(String typeOfTaco){
         this.typeOfTaco = typeOfTaco;
+    }
+
+    public boolean getHasSalsa(){
+        return hasSalsa;
+    }
+
+    public void setHasSalsa(boolean hasSalsa){
+        this.hasSalsa = hasSalsa;
+    }
+
+    public void consume(String name){
+        System.out.println("Crunch...crunch..." + name + " is amazing.");
+    }
+
+    @Override
+    public Collection<String> getFullDescription() {
+        return null;
     }
 }

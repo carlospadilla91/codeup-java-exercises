@@ -1,6 +1,8 @@
 package prep;
 
-public class Burger extends Food{
+import java.util.Collection;
+
+public class Burger extends Food implements Consumable{
 
     private int numOfPatties;
     private boolean hasCheese;
@@ -23,5 +25,15 @@ public class Burger extends Food{
 
     public void setHasCheese(boolean hasCheese) {
         this.hasCheese = hasCheese;
+    }
+
+    @Override
+    public void consume(String name) {
+
+    }
+
+    @Override
+    public Collection<String> getFullDescription() {
+        return null;
     }
 }
