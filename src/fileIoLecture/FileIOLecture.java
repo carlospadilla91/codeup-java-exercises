@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -95,7 +96,7 @@ public class FileIOLecture {
 
         // ============================ WRITING FILES
 
-//        Path p = Paths.get("src/fileIoLecture/test.txt");
+        Path p = Paths.get("src/fileIoLecture/test.txt");
 //
 //        List<String> newNames = Arrays.asList("John", "Fred", "Cathy");
 //        try {
@@ -104,15 +105,15 @@ public class FileIOLecture {
 //            e.printStackTrace();
 //        }
 
-//        List<String> names = new ArrayList<>();
-//        names.add("Tim");
-//        names.add("Sally");
-//        names.add("Mary");
-//        try {
-//            Files.write(p, names, StandardOpenOption.APPEND);
-//        } catch(IOException e) {
-//            e.printStackTrace();
-//        }
+        List<String> names = new ArrayList<>();
+        names.add("Tim");
+        names.add("Sally");
+        names.add("Mary");
+        try {
+            Files.write(p, names, StandardOpenOption.APPEND);
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
