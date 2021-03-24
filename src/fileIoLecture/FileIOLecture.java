@@ -12,6 +12,7 @@ public class FileIOLecture {
 
     public static void main(String[] args) {
 
+
         // ============================ PATH
 
 //        Path pathToTest = Paths.get("src", "fileIoLecture", "test.txt"); // best practice not to hard code back/forward slashes due to different OS's
