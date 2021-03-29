@@ -18,7 +18,7 @@ public class Person {
 
     //TODO: The class should have a constructor that accepts a `String` value and set the person's name to the passed string.
     public Person(String name){
-        setName(name);
+        this.name = name;
     }
 
     public static void main(String[] args) {

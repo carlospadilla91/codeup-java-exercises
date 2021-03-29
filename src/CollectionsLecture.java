@@ -35,10 +35,10 @@ public class CollectionsLecture {
 
         // creating Array Lists
 
-//        List<Integer> numbers = new ArrayList<>();
-//        numbers.add(1);
-//        numbers.add(2);
-//        numbers.add(3);
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
 //
 //        List<String> names = new ArrayList<>(Arrays.asList(
 //                "Fred",
@@ -88,7 +88,7 @@ public class CollectionsLecture {
 
         // info about list and getting elements
 
-//        System.out.println(numbers.size());
+        System.out.println(numbers.size());
 //        System.out.println(numbers.indexOf(3));
 //        System.out.println(numbers);
 //        System.out.println(numbers.indexOf(105));
@@ -110,12 +110,12 @@ public class CollectionsLecture {
 
         // ----------------------------- Hash Maps
 
-        Map<String, String> usernames = new HashMap<>();
-
-        usernames.put("Carlos", "cpadilla39");
-        usernames.put("Sarah", "sarahjean326");
-        usernames.put("Maggie", "maggierules");
-        System.out.println(usernames); // this is printing out Sarah, Maggie then Carlos...Should it not be Carlos first?
+//        Map<String, String> usernames = new HashMap<>();
+//
+//        usernames.put("Carlos", "cpadilla39");
+//        usernames.put("Sarah", "sarahjean326");
+//        usernames.put("Maggie", "maggierules");
+//        System.out.println(usernames); // this is printing out Sarah, Maggie then Carlos...Should it not be Carlos first?
 
         // creating hash maps
 //        Map<String, String> usernames = new HashMap<>();
